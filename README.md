@@ -1,15 +1,9 @@
-# gcaleventurlify
+# GCalEventURLify
 
-To install dependencies:
+This is a TypeScript library that create a Google Calendar event URL.
 
-```bash
-bun install
+## sample
+
 ```
-
-To run:
-
-```bash
-bun run index.ts
+https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sample%20Event&dates=20210101T000000Z/20210101T010000Z&details=This%20is%20a%20sample%20event&location=Tokyo
 ```
-
-This project was created using `bun init` in bun v1.1.3. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
