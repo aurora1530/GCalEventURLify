@@ -5,7 +5,7 @@ type Params = Readonly<{
 }>;
 
 export class EventURL {
-  private static readonly _rootURL = `https://calendar.google.com/calendar/u/0/r/eventedit`;
+  private static readonly _rootURL = `https://calendar.google.com/calendar/render?action=TEMPLATE`;
 
   private constructor(private readonly _params: Params = {}) {}
 
@@ -21,6 +21,6 @@ export class EventURL {
     if (Object.keys(this._params).length === 0) return EventURL._rootURL;
 
     const params = Object.values(this._params).map((param) => param.encoded());
-    return `${EventURL._rootURL}?${params.join('&')}`;
+    return `${EventURL._rootURL}&${params.join('&')}`;
   }
 }
