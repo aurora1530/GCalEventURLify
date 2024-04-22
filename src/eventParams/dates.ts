@@ -1,11 +1,17 @@
 import { EventParam } from './eventParam';
 import { dateToRFC5545 } from '../utils';
 
+export type DatesConf = {
+  startDate: Date;
+  endDate: Date;
+  isAllDay?: boolean;
+};
+
 export class DatesParam extends EventParam {
   public readonly key = 'dates';
   public readonly value: string;
 
-  constructor(startDate: Date, endDate: Date, isAllDay: boolean = false) {
+  constructor({ startDate, endDate, isAllDay = false }: DatesConf) {
     super();
     const formattedStartDate = dateToRFC5545(startDate);
     const formattedEndDate = dateToRFC5545(endDate);
