@@ -8,6 +8,10 @@ export type RecurConf = {
   count?: number;
 };
 
+/**
+ * Represents the recurrence rule for an event.
+ * cf. https://datatracker.ietf.org/doc/html/rfc5545#section-3.8.5.3
+ */
 export class RecurParam extends EventParam {
   public readonly key = 'recur';
   public readonly value: string;
