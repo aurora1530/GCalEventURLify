@@ -1,7 +1,7 @@
 import { EventParam } from './eventParam';
 import { dateToRFC5545, getObjectKeys } from '../utils';
 
-type RecurConf = {
+export type RecurConf = {
   freq?: 'SECONDLY' | 'MINUTELY' | 'HOURLY' | 'DAILY' | 'WEEKLY' | 'MONTHLY' | 'YEARLY';
   interval: number;
   until?: Date;
