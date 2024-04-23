@@ -18,9 +18,7 @@ export class EventURL {
   }
 
   public generateURL(): string {
-    if (Object.keys(this._params).length === 0) return EventURL._rootURL;
-
-    const params = Object.values(this._params).map((param) => param.encoded());
-    return `${EventURL._rootURL}&${params.join('&')}`;
+    const params = Object.values(this._params).map((param) => '&' + param.encoded());
+    return `${EventURL._rootURL}${params.join('')}`;
   }
 }
