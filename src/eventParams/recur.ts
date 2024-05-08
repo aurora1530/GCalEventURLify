@@ -3,7 +3,7 @@ import { dateToRFC5545, getObjectKeys } from '../utils';
 
 export type RecurConf = {
   freq?: 'SECONDLY' | 'MINUTELY' | 'HOURLY' | 'DAILY' | 'WEEKLY' | 'MONTHLY' | 'YEARLY';
-  interval: number;
+  interval?: number;
   until?: Date;
   count?: number;
 };
